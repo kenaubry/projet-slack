@@ -16,7 +16,7 @@ Lancer `npm install -g json-server` pour installer les dependances.
 
 Lancer 'json-server --watch db.json' pour lancer le serveur backend. 
 
-Naviguez sur `http://localhost:3000/`. T
+Naviguez sur `http://localhost:3000/`. 
 
 ### Fonctionnalités/modifs
 
