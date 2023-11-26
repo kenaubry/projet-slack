@@ -24,8 +24,9 @@ body {
 
 .message-metadata {
     display: flex;
-    flex-direction: column; /* Aligne les éléments en colonne */
+    flex-direction: row; /* Aligne les éléments en colonne */
     align-items: flex-end; /* Aligne les éléments à droite */
+    gap: 20px;
 }
 
 .message-date {

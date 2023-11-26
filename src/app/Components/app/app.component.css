@@ -1,4 +1,14 @@
+* {
+    font-family: 'Raleway', sans-serif;
+}
 
+.header {
+    font-family: 'Raleway';
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
 
 .center-container {
     display: flex;
@@ -14,7 +24,7 @@
     background-color: #fcfcfc;
     padding: 20px 50px 40px;
     box-shadow: 1px 4px 10px 1px #aaa;
-    font-family: sans-serif;
+   /* font-family: sans-serif; */
   }
   
   #feedback-form * {

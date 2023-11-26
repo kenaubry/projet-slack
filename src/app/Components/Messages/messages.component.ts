@@ -9,8 +9,10 @@ import { Message, MessagesService } from '../../Services/messages.service';
   templateUrl: './messages.component.html',
   styleUrl: './messages.component.css',
 })
+
 export class MessagesComponent {
   @Input() message!: Message;
 
   constructor(private messagesService: MessagesService) {}
+
 }

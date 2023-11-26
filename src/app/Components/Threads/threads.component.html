@@ -1,6 +1,7 @@
 <div class="grid-container">
     <div class="side">
       <h1>Mini-Slack</h1>
+      <p class="channel">CHANNELS</p>
     <div *ngFor="let thread of threads">
       <button class="thread-button" (click)="selectThread(thread)">{{ thread.label }}</button>
     </div>
@@ -12,7 +13,7 @@
   </div>
 </div>
 <div class="messageForm">
-    <input class="magic-input" type="text" name="message" [(ngModel)]="message" placeholder="Entrez votre message..." />
+    <input class="magic-input" type="text" name="message" (keyup.enter)="sendMessage()" [(ngModel)]="message" placeholder="Entrez votre message..." />
     <button class="magic-button" (click)="sendMessage()">Envoyer</button>
 </div>
 

@@ -9,8 +9,9 @@
     <button (click)="this.UserService.login(this.username)">Connexion</button>
 </div>
 -->
-
-
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" />
+</head>
 <div *ngIf="this.UserService.user">
     <app-threads></app-threads>
 </div>
@@ -20,7 +21,7 @@
         <h2 class="header">Mini-Slack</h2>
         <div>
             <p>Entrez un nom d'utilisateur :</p>
-            <input type="text" [(ngModel)]="this.username" />
+            <input type="text" (keyup.enter)="this.UserService.login(this.username)" [(ngModel)]="this.username" />
             <button type="submit" (click)="this.UserService.login(this.username)">Connexion</button>
         </div>
         </div>
