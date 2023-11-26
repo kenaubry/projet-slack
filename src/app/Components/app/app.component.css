@@ -1,10 +1,13 @@
+ body {
+    margin: 0;
+ }
+
 .center-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; /* Cette propriété garantit que le conteneur occupe 100% de la hauteur de la vue */
 }
-
 
 #feedback-form {
     width: 280px;

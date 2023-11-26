@@ -1,7 +1,10 @@
+body {
+  margin: 0;
+}
 .grid-container {
   display: flex;
-  margin-bottom: 150px;
 }
+
 
 h1 {
   text-align: center;
@@ -15,8 +18,7 @@ h1 {
 }
 
 .side {
-  background-color: #fdfdfd;
-  border: 1px solid #e6e6e6;
+  background-color: rgb(47, 47, 56);
   width: 20%;
   box-sizing: border-box;
   display: flex;
@@ -24,12 +26,14 @@ h1 {
 }
 
 .messageList {
-  width: 70%;
+  width: 80%;
+  height: 90vh;
   box-sizing: border-box;
   display: flex;
   flex-direction: column; /* Ajout de cette ligne */
   padding: 10px;
   margin-left: 10px;
+  overflow-y: auto;
 }
 
 .messageForm {
