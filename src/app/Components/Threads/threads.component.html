@@ -5,10 +5,15 @@
     <div *ngFor="let thread of threads">
       <button class="thread-button" (click)="selectThread(thread)">{{ thread.label }}</button>
     </div>
+    <div class="grid-container-thread">
+        <input type="text" name="thread" (keyup.enter)="createNewThread()" [(ngModel)]="newThreadName" placeholder="Entrez le nom du nouveau thread..." />
+        <button  class="thread-button" (click)="createNewThread()"> Nouveau Thread </button>
+    </div>
   </div>
   <div class="messageList">
-    <div *ngFor="let message of messages">
+    <div class="grid-container" *ngFor="let message of messages">
       <app-messages [message]="message"></app-messages>
+      <button class="button-delete" (click)="deleteMessage(message.id)">✖️</button>
     </div>
   </div>
 </div>

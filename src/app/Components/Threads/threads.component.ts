@@ -19,6 +19,7 @@ export class ThreadsComponent implements OnInit {
     messages!: Message[];
     @Input()
     message!: string;
+    newThreadName!: string;
 
     constructor(
         public threadsService: ThreadsService,
@@ -35,6 +36,28 @@ export class ThreadsComponent implements OnInit {
                 console.log(this.messages);
             });
     }
+
+    createNewThread() {
+        // Suppose que vous avez une méthode createThread dans threadsService
+        this.threadsService.createThread({
+            // Propriétés nécessaires pour créer un nouveau thread
+            // Par exemple, le nom du thread, l'auteur, etc.
+            label: this.newThreadName
+        }).subscribe(
+            (newThread: any) => {
+                // Une fois le thread créé, mettez à jour la liste des threads
+                this.threads.push(newThread);
+                // Sélectionnez le nouveau thread
+                this.selectThread(newThread);
+                this.newThreadName = "";
+            },
+            (error: any) => {
+                // Gérez les erreurs ici
+                console.error(error);
+            }
+        );
+    }
+    
 
     ngOnInit() {
         this.threadsService.getThreads().subscribe((threads: any) => {
@@ -57,4 +80,16 @@ export class ThreadsComponent implements OnInit {
                 this.message = "";
             });
     }
+
+    deleteMessage(messageId: string) {
+        // Utilisation du service messagesService pour supprimer le message
+        this.messagesService
+            .deleteMessage(messageId)
+            // Utilisation d'un observable pour gérer la réponse asynchrone
+            .subscribe(() => {
+                // Suppression du message du tableau messages
+                this.messages = this.messages.filter(message => message.id !== messageId);
+            });
+    }
+    
 }

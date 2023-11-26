@@ -3,8 +3,28 @@ body {
 }
 .grid-container {
   display: flex;
+  justify-content: space-between;
 }
 
+.grid-container-thread {
+  display: flex;
+  justify-content: space-between;
+  align-items: normal;
+}
+
+.button-delete {
+  width: 10%;
+  border: none;
+  background-color: white;
+}
+
+.button-delete:hover {
+  background-color: grey;
+}
+
+app-message {
+  width: 100%;
+}
 .channel {
   text-align: center;
   color: white;
@@ -27,6 +47,7 @@ h1 {
   box-sizing: border-box;
   display: flex;
   flex-direction: column; /* Ajout de cette ligne */
+
 }
 
 .messageList {
@@ -41,6 +62,7 @@ h1 {
 }
 
 .messageForm {
+  background-color: rgb(47, 47, 56);
   position: fixed;
   width: 100%;
   bottom: 0;
@@ -95,6 +117,8 @@ h1 {
     border: none;
     color: #eee !important;
     font-weight: 500;
+    box-sizing: border-box;
+
    /* box-shadow: 1px 4px 10px 1px #aaa;
     
     background: #207cca; /* Old browsers */
