@@ -1,6 +1,6 @@
-# Slack
+# Mini-Slack
 
-### Front-end
+## Front-end
 
 Lancer `npm install` pour installer les dependances.
 
@@ -10,7 +10,7 @@ Naviguez sur `http://localhost:4200/`.
 
 L'application rafraichira automatiquement en cas de modifications sur les fichiers.
 
-### Back-end
+## Back-end
 
 Lancer `npm install -g json-server` pour installer les dependances.
 
