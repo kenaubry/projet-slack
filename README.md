@@ -1,13 +1,19 @@
 # Slack
 
-accepter le TS, refuser l'optimisation
+### Front-end
 
-`npm install` pour installer les dependances
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Lancer `npm install` pour installer les dependances.
 
-Backend:
-backend installation :
+Puis lancer `ng serve` pour lancer le serveur de développement. 
 
-npm install -g json-server
+Naviguez sur `http://localhost:4200/`. 
 
-Run : 'json-server --watch db.json' for a backend server. Navigate to `http://localhost:3000/`. The application will automatically reload if you change any of the source files.
+L'application rafraichira automatiquement en cas de modifications sur les fichiers.
+
+### Back-end
+
+Lancer `npm install -g json-server` pour installer les dependances.
+
+Lancer 'json-server --watch db.json' pour lancer le serveur backend. 
+
+Naviguez sur `http://localhost:3000/`. T
