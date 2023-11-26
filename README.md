@@ -21,8 +21,9 @@ Naviguez sur `http://localhost:3000/`. T
 ### Fonctionnalités/modifs
 
 - Ajout de la possibilité de supprimer un message
+- Ajout de la possibilité de créer un thread
 - CSS plus propre
 
 ### A ajouter
 
-- Créer/supprimer un thread
+- Supprimer un thread
