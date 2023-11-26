@@ -1,0 +1,18 @@
+<h1>Mini-Slack</h1>
+<div class="grid-container">
+  <div class="side">
+    <div *ngFor="let thread of threads">
+      <button class="thread-button" (click)="selectThread(thread)">{{ thread.label }}</button>
+    </div>
+  </div>
+  <div class="messageList">
+    <div *ngFor="let message of messages">
+      <app-messages [message]="message"></app-messages>
+    </div>
+  </div>
+</div>
+<div class="messageForm">
+    <input class="magic-input" type="text" name="message" [(ngModel)]="message" placeholder="Entrez votre message..." />
+    <button class="magic-button" (click)="sendMessage()">Envoyer</button>
+</div>
+

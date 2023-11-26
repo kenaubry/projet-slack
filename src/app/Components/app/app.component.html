@@ -1,0 +1,28 @@
+<!--
+    <h1>Mini-Slack</h1>
+<div *ngIf="this.UserService.user">
+    <app-threads></app-threads>
+</div>
+<div *ngIf="!this.UserService.user">
+    <p>Entrer votre nom d'utilisateur :</p>
+    <input type="text" [(ngModel)]="this.username" />
+    <button (click)="this.UserService.login(this.username)">Connexion</button>
+</div>
+-->
+
+
+<div *ngIf="this.UserService.user">
+    <app-threads></app-threads>
+</div>
+<div *ngIf="!this.UserService.user">
+    <div class="center-container">
+    <div id="feedback-form">
+        <h2 class="header">Mini-Slack</h2>
+        <div>
+            <p>Entrez un nom d'utilisateur :</p>
+            <input type="text" [(ngModel)]="this.username" />
+            <button type="submit" (click)="this.UserService.login(this.username)">Connexion</button>
+        </div>
+        </div>
+    </div>
+</div>
