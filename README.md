@@ -24,7 +24,7 @@ Au caractère Ligne:1 : 1
     + FullyQualifiedErrorId : UnauthorizedAccess
 ```
 
-Tapez cette commande dans PowerShell : `Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force`
+Tapez cette commande dans PowerShell : `Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force` puis refaites `ng serve`
 
 Naviguez sur `http://localhost:4200/`. 
 
